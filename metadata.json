@@ -1,0 +1,6 @@
+{
+  "name": "Fillwords",
+  "description": "Fillwords: Word Search — trace connected letter paths to fill every tile on the board and solve handcrafted word-grid puzzles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
