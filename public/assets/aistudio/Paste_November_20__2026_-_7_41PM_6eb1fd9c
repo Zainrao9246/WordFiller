@@ -1,0 +1,316 @@
+2026-11-20T14:24:58.0182396Z Current runner version: '2.338.2'
+2026-11-20T14:24:58.0221342Z ##[group]Runner Image Provisioner
+2026-11-20T14:24:58.0222733Z Hosted Compute Agent
+2026-11-20T14:24:58.0223907Z Version: 20261103.629
+2026-11-20T14:24:58.0225292Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-20T14:24:58.0226832Z Build Date: 2026-11-03T17:26:59Z
+2026-11-20T14:24:58.0228148Z Worker ID: {c44d4dd9-44f7-4411-aa3c-f98a4f49776e}
+2026-11-20T14:24:58.0229607Z Region: centralus
+2026-11-20T14:24:58.0230867Z Cloud: Azure
+2026-11-20T14:24:58.0231891Z ##[endgroup]
+2026-11-20T14:24:58.0234502Z ##[group]Operating System
+2026-11-20T14:24:58.0235843Z Ubuntu
+2026-11-20T14:24:58.0236740Z 26.04.1
+2026-11-20T14:24:58.0237786Z LTS
+2026-11-20T14:24:58.0238743Z ##[endgroup]
+2026-11-20T14:24:58.0239951Z ##[group]Runner Image
+2026-11-20T14:24:58.0241151Z Image: ubuntu-26.04
+2026-11-20T14:24:58.0242065Z Version: 20261111.196.1
+2026-11-20T14:24:58.0245231Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-20T14:24:58.0248208Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-20T14:24:58.0250119Z ##[endgroup]
+2026-11-20T14:24:58.0252140Z ##[group]GITHUB_TOKEN Permissions
+2026-11-20T14:24:58.0255586Z Contents: write
+2026-11-20T14:24:58.0256701Z Metadata: read
+2026-11-20T14:24:58.0257843Z ##[endgroup]
+2026-11-20T14:24:58.0260872Z Secret source: Actions
+2026-11-20T14:24:58.0262694Z Cache mode: write
+2026-11-20T14:24:58.0264468Z Prepare workflow directory
+2026-11-20T14:24:58.0624048Z Prepare all required actions
+2026-11-20T14:24:58.0698185Z Getting action download info
+2026-11-20T14:24:58.3950572Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-20T14:24:58.5260001Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-11-20T14:24:59.0525177Z Download action repository 'gradle/actions@v4' (SHA:ed408507eac070d1f99cc633dbcf757c94c7933a)
+2026-11-20T14:24:59.7849438Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-20T14:24:59.9510403Z Download action repository 'softprops/action-gh-release@v2' (SHA:3bb12739c298aeb8a4eeaf626c5b8d85266b0e65)
+2026-11-20T14:25:00.4193810Z Complete job name: build-apk
+2026-11-20T14:25:00.5401605Z ##[group]Run actions/checkout@v4
+2026-11-20T14:25:00.5403046Z with:
+2026-11-20T14:25:00.5403902Z   repository: Zainrao9246/WordFiller
+2026-11-20T14:25:00.5413335Z   token: ***
+2026-11-20T14:25:00.5414183Z   ssh-strict: true
+2026-11-20T14:25:00.5415204Z   ssh-user: git
+2026-11-20T14:25:00.5416090Z   persist-credentials: true
+2026-11-20T14:25:00.5417046Z   clean: true
+2026-11-20T14:25:00.5417932Z   sparse-checkout-cone-mode: true
+2026-11-20T14:25:00.5418961Z   fetch-depth: 1
+2026-11-20T14:25:00.5419808Z   fetch-tags: false
+2026-11-20T14:25:00.5420679Z   show-progress: true
+2026-11-20T14:25:00.5421818Z   lfs: false
+2026-11-20T14:25:00.5423125Z   submodules: false
+2026-11-20T14:25:00.5424583Z   set-safe-directory: true
+2026-11-20T14:25:00.5426291Z   allow-unsafe-pr-checkout: false
+2026-11-20T14:25:00.5427721Z ##[endgroup]
+2026-11-20T14:25:00.8706149Z Syncing repository: Zainrao9246/WordFiller
+2026-11-20T14:25:00.8709718Z ##[group]Getting Git version info
+2026-11-20T14:25:00.8711516Z Working directory is '/home/runner/work/WordFiller/WordFiller'
+2026-11-20T14:25:00.8713529Z [command]/usr/bin/git version
+2026-11-20T14:25:00.8733796Z git version 2.56.1
+2026-11-20T14:25:00.8760206Z ##[endgroup]
+2026-11-20T14:25:00.8776547Z Temporarily overriding HOME='/home/runner/work/_temp/197cf0ec-944e-4001-bb05-012911abdaec' before making global git config changes
+2026-11-20T14:25:00.8779475Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T14:25:00.8782687Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/WordFiller/WordFiller
+2026-11-20T14:25:00.8867843Z Deleting the contents of '/home/runner/work/WordFiller/WordFiller'
+2026-11-20T14:25:00.8871809Z ##[group]Initializing the repository
+2026-11-20T14:25:00.8877097Z [command]/usr/bin/git init /home/runner/work/WordFiller/WordFiller
+2026-11-20T14:25:00.9028291Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-20T14:25:00.9030737Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-20T14:25:00.9032852Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-20T14:25:00.9034902Z hint: call:
+2026-11-20T14:25:00.9036338Z hint:
+2026-11-20T14:25:00.9037898Z hint: 	git config --global init.defaultBranch <name>
+2026-11-20T14:25:00.9039622Z hint:
+2026-11-20T14:25:00.9041220Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-20T14:25:00.9043454Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-20T14:25:00.9045745Z hint:
+2026-11-20T14:25:00.9047498Z hint: 	git branch -m <name>
+2026-11-20T14:25:00.9049220Z hint:
+2026-11-20T14:25:00.9051061Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-20T14:25:00.9053581Z Initialized empty Git repository in /home/runner/work/WordFiller/WordFiller/.git/
+2026-11-20T14:25:00.9059205Z [command]/usr/bin/git remote add origin https://github.com/Zainrao9246/WordFiller
+2026-11-20T14:25:00.9123762Z ##[endgroup]
+2026-11-20T14:25:00.9126266Z ##[group]Disabling automatic garbage collection
+2026-11-20T14:25:00.9128342Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-20T14:25:00.9167914Z ##[endgroup]
+2026-11-20T14:25:00.9170144Z ##[group]Setting up auth
+2026-11-20T14:25:00.9174941Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T14:25:00.9212336Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T14:25:00.9717979Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T14:25:00.9755896Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T14:25:01.0048547Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T14:25:01.0086286Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T14:25:01.0386272Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-20T14:25:01.0432666Z ##[endgroup]
+2026-11-20T14:25:01.0435572Z ##[group]Fetching the repository
+2026-11-20T14:25:01.0445894Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +70a97ac23b28b3394728917e4d2d6e73addaa6f5:refs/remotes/origin/main
+2026-11-20T14:25:01.4970807Z From https://github.com/Zainrao9246/WordFiller
+2026-11-20T14:25:01.4972791Z  * [new ref]         70a97ac23b28b3394728917e4d2d6e73addaa6f5 -> origin/main
+2026-11-20T14:25:01.4977769Z ##[endgroup]
+2026-11-20T14:25:01.4979973Z ##[group]Determining the checkout info
+2026-11-20T14:25:01.4982268Z ##[endgroup]
+2026-11-20T14:25:01.4986531Z [command]/usr/bin/git sparse-checkout disable
+2026-11-20T14:25:01.5044464Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-20T14:25:01.5078398Z ##[group]Checking out the ref
+2026-11-20T14:25:01.5082040Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-20T14:25:01.5243961Z Switched to a new branch 'main'
+2026-11-20T14:25:01.5250270Z branch 'main' set up to track 'origin/main'.
+2026-11-20T14:25:01.5256994Z ##[endgroup]
+2026-11-20T14:25:01.5304946Z [command]/usr/bin/git log -1 --format=%H
+2026-11-20T14:25:01.5331240Z 70a97ac23b28b3394728917e4d2d6e73addaa6f5
+2026-11-20T14:25:01.5701730Z ##[group]Run actions/setup-java@v4
+2026-11-20T14:25:01.5702603Z with:
+2026-11-20T14:25:01.5703362Z   distribution: temurin
+2026-11-20T14:25:01.5704148Z   java-version: 17
+2026-11-20T14:25:01.5705048Z   java-package: jdk
+2026-11-20T14:25:01.5705812Z   check-latest: false
+2026-11-20T14:25:01.5706578Z   server-id: github
+2026-11-20T14:25:01.5707357Z   server-username: GITHUB_ACTOR
+2026-11-20T14:25:01.5708188Z   server-password: GITHUB_TOKEN
+2026-11-20T14:25:01.5709018Z   overwrite-settings: true
+2026-11-20T14:25:01.5709816Z   job-status: success
+2026-11-20T14:25:01.5713263Z   token: ***
+2026-11-20T14:25:01.5714025Z ##[endgroup]
+2026-11-20T14:25:01.7535022Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-11-20T14:25:01.7544603Z ##[group]Installed distributions
+2026-11-20T14:25:01.7580673Z Resolved Java 17.0.21+9 from tool-cache
+2026-11-20T14:25:01.7582293Z Setting Java 17.0.21+9 as the default
+2026-11-20T14:25:01.7592381Z (node:2416) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T14:25:01.7593805Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T14:25:01.7596476Z Creating toolchains.xml for JDK version 17 from temurin
+2026-11-20T14:25:01.7675345Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-20T14:25:01.7676251Z 
+2026-11-20T14:25:01.7676751Z Java configuration:
+2026-11-20T14:25:01.7677670Z   Distribution: temurin
+2026-11-20T14:25:01.7678469Z   Version: 17.0.21+9
+2026-11-20T14:25:01.7679392Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:01.7680306Z 
+2026-11-20T14:25:01.7681218Z ##[endgroup]
+2026-11-20T14:25:01.7697071Z Creating settings.xml with server-id: github
+2026-11-20T14:25:01.7722266Z Writing to /home/runner/.m2/settings.xml
+2026-11-20T14:25:01.7961222Z ##[group]Run if [ -f debug.keystore.base64 ]; then
+2026-11-20T14:25:01.7962507Z [36;1mif [ -f debug.keystore.base64 ]; then[0m
+2026-11-20T14:25:01.7963570Z [36;1m  base64 -d debug.keystore.base64 > debug.keystore[0m
+2026-11-20T14:25:01.7964514Z [36;1melif [ ! -f debug.keystore ]; then[0m
+2026-11-20T14:25:01.7965793Z [36;1m  keytool -genkeypair -v \[0m
+2026-11-20T14:25:01.7966677Z [36;1m    -keystore debug.keystore \[0m
+2026-11-20T14:25:01.7967539Z [36;1m    -alias androiddebugkey \[0m
+2026-11-20T14:25:01.7968385Z [36;1m    -storepass android \[0m
+2026-11-20T14:25:01.7969215Z [36;1m    -keypass android \[0m
+2026-11-20T14:25:01.7970022Z [36;1m    -keyalg RSA \[0m
+2026-11-20T14:25:01.7970810Z [36;1m    -keysize 2048 \[0m
+2026-11-20T14:25:01.7971629Z [36;1m    -validity 10000 \[0m
+2026-11-20T14:25:01.7972481Z [36;1m    -dname "CN=Android Debug,O=Android,C=US"[0m
+2026-11-20T14:25:01.7973330Z [36;1mfi[0m
+2026-11-20T14:25:01.8053854Z shell: /usr/bin/bash -e {0}
+2026-11-20T14:25:01.8055465Z env:
+2026-11-20T14:25:01.8056931Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:01.8058875Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:01.8060527Z ##[endgroup]
+2026-11-20T14:25:04.2188606Z Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days
+2026-11-20T14:25:04.2190090Z 	for: CN=Android Debug, O=Android, C=US
+2026-11-20T14:25:04.5708778Z [Storing debug.keystore]
+2026-11-20T14:25:04.7298329Z ##[group]Run gradle/actions/setup-gradle@v4
+2026-11-20T14:25:04.7298658Z with:
+2026-11-20T14:25:04.7298854Z   gradle-version: 9.3.1
+2026-11-20T14:25:04.7299083Z   cache-disabled: false
+2026-11-20T14:25:04.7299300Z   cache-read-only: false
+2026-11-20T14:25:04.7299537Z   cache-write-only: false
+2026-11-20T14:25:04.7299778Z   cache-overwrite-existing: false
+2026-11-20T14:25:04.7300042Z   cache-cleanup: on-success
+2026-11-20T14:25:04.7300336Z   gradle-home-cache-includes: caches
+notifications
+
+2026-11-20T14:25:04.7300660Z   add-job-summary: always
+2026-11-20T14:25:04.7300917Z   add-job-summary-as-pr-comment: never
+2026-11-20T14:25:04.7301398Z   dependency-graph: disabled
+2026-11-20T14:25:04.7301727Z   dependency-graph-report-dir: dependency-graph-reports
+2026-11-20T14:25:04.7302091Z   dependency-graph-continue-on-failure: true
+2026-11-20T14:25:04.7302394Z   build-scan-publish: false
+2026-11-20T14:25:04.7302653Z   validate-wrappers: true
+2026-11-20T14:25:04.7302932Z   allow-snapshot-wrappers: false
+2026-11-20T14:25:04.7303211Z   gradle-home-cache-strict-match: false
+2026-11-20T14:25:04.7303492Z   workflow-job-context: null
+2026-11-20T14:25:04.7306329Z   github-token: ***
+2026-11-20T14:25:04.7332313Z env:
+2026-11-20T14:25:04.7332827Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:04.7333716Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:04.7334435Z ##[endgroup]
+2026-11-20T14:25:05.0953629Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-11-20T14:25:05.0956295Z Preparing cache for cleanup.
+2026-11-20T14:25:05.0959690Z ##[group]Restore Gradle state from cache
+2026-11-20T14:25:05.3083309Z Gradle User Home cache not found. Will initialize empty.
+2026-11-20T14:25:05.3084234Z ##[endgroup]
+2026-11-20T14:25:05.3256344Z ##[group]All Gradle Wrapper jars are valid
+2026-11-20T14:25:05.3257564Z 
+2026-11-20T14:25:05.3257968Z ##[endgroup]
+2026-11-20T14:25:05.4132631Z ##[group]Provision Gradle 9.3.1
+2026-11-20T14:25:08.8891475Z Gradle distribution 9.3.1 not found in cache. Will download.
+2026-11-20T14:25:09.6600949Z Downloaded https://services.gradle.org/distributions/gradle-9.3.1-bin.zip to /home/runner/work/_temp/.gradle-actions/gradle-installations/downloads/gradle-9.3.1-bin.zip (size 137037885)
+2026-11-20T14:25:09.6775842Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:25:10.9784256Z Sent 2725375 of 136943103 (2.0%), 2.6 MBs/sec
+2026-11-20T14:25:11.9788023Z Sent 2725375 of 136943103 (2.0%), 1.3 MBs/sec
+2026-11-20T14:25:12.9798312Z Sent 69834239 of 136943103 (51.0%), 22.2 MBs/sec
+2026-11-20T14:25:13.9799533Z Sent 69834239 of 136943103 (51.0%), 16.6 MBs/sec
+2026-11-20T14:25:14.9801515Z Sent 69834239 of 136943103 (51.0%), 13.3 MBs/sec
+2026-11-20T14:25:15.9807303Z Sent 69834239 of 136943103 (51.0%), 11.1 MBs/sec
+2026-11-20T14:25:16.9809427Z Sent 69834239 of 136943103 (51.0%), 9.5 MBs/sec
+2026-11-20T14:25:17.9809577Z Sent 69834239 of 136943103 (51.0%), 8.3 MBs/sec
+2026-11-20T14:25:18.9813426Z Sent 69834239 of 136943103 (51.0%), 7.4 MBs/sec
+2026-11-20T14:25:19.9813171Z Sent 69834239 of 136943103 (51.0%), 6.7 MBs/sec
+2026-11-20T14:25:20.9816284Z Sent 69834239 of 136943103 (51.0%), 6.1 MBs/sec
+2026-11-20T14:25:21.9816821Z Sent 69834239 of 136943103 (51.0%), 5.5 MBs/sec
+2026-11-20T14:25:22.9289700Z Sent 136943103 of 136943103 (100.0%), 10.1 MBs/sec
+2026-11-20T14:25:23.1436255Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/.gradle-actions/gradle-installations/downloads/gradle-9.3.1-bin.zip
+2026-11-20T14:25:24.1158698Z Extracted Gradle 9.3.1 to /home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-9.3.1
+2026-11-20T14:25:24.1160124Z Provisioned Gradle executable /home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-9.3.1/bin/gradle
+2026-11-20T14:25:24.1161787Z ##[endgroup]
+2026-11-20T14:25:24.1348001Z ##[group]Run gradle :app:testDebugUnitTest
+2026-11-20T14:25:24.1348387Z [36;1mgradle :app:testDebugUnitTest[0m
+2026-11-20T14:25:24.1397037Z shell: /usr/bin/bash -e {0}
+2026-11-20T14:25:24.1397291Z env:
+2026-11-20T14:25:24.1397599Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:24.1398107Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-11-20T14:25:24.1398540Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-11-20T14:25:24.1398863Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-11-20T14:25:24.1399175Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-11-20T14:25:24.1399661Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-11-20T14:25:24.1400096Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-11-20T14:25:24.1400574Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-11-20T14:25:24.1400898Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-11-20T14:25:24.1401205Z ##[endgroup]
+2026-11-20T14:25:24.7865408Z 
+2026-11-20T14:25:24.7865926Z Welcome to Gradle 9.3.1!
+2026-11-20T14:25:24.7866248Z 
+2026-11-20T14:25:24.7866472Z Here are the highlights of this release:
+2026-11-20T14:25:24.7867016Z  - Test reporting improvements
+2026-11-20T14:25:24.7867481Z  - Error and warning improvements
+2026-11-20T14:25:24.7867942Z  - Build authoring improvements
+2026-11-20T14:25:24.7868226Z 
+2026-11-20T14:25:24.7868567Z For more details see https://docs.gradle.org/9.3.1/release-notes.html
+2026-11-20T14:25:24.7869065Z 
+2026-11-20T14:25:24.9851340Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-11-20T14:25:28.2826882Z Calculating task graph as no cached configuration is available for tasks: :app:testDebugUnitTest
+2026-11-20T14:26:30.6856606Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1795184731742.json
+2026-11-20T14:26:30.7837621Z 
+2026-11-20T14:26:30.7838187Z FAILURE: Build failed with an exception.
+2026-11-20T14:26:30.7838643Z 
+2026-11-20T14:26:30.7838811Z * What went wrong:
+2026-11-20T14:26:30.7839270Z A problem occurred configuring project ':app'.
+2026-11-20T14:26:30.7839894Z > Failed to notify project evaluation listener.
+2026-11-20T14:26:30.7840716Z    > The file '/home/runner/work/WordFiller/WordFiller/.env.example' could not be found
+2026-11-20T14:26:30.7841350Z 
+2026-11-20T14:26:30.7841500Z * Try:
+2026-11-20T14:26:30.7841952Z > Run with --stacktrace option to get the stack trace.
+2026-11-20T14:26:30.7842640Z > Run with --info or --debug option to get more log output.
+2026-11-20T14:26:30.7843464Z > Run with --scan to get full insights from a Build Scan (powered by Develocity).
+2026-11-20T14:26:30.7844275Z > Get more help at https://help.gradle.org.
+2026-11-20T14:26:30.7844872Z 
+2026-11-20T14:26:30.7845040Z BUILD FAILED in 1m 6s
+2026-11-20T14:26:30.7849287Z Configuration cache entry stored.
+2026-11-20T14:26:31.1701097Z ##[error]Process completed with exit code 1.
+2026-11-20T14:26:31.1858525Z Post job cleanup.
+2026-11-20T14:26:31.4410148Z In post-action step
+2026-11-20T14:26:31.4424152Z ##[group]Stopping Gradle daemons
+2026-11-20T14:26:31.4425770Z Stopping Gradle daemons for /home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-9.3.1
+2026-11-20T14:26:31.4443353Z [command]/home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-9.3.1/bin/gradle --stop
+2026-11-20T14:26:32.2892843Z Stopping Daemon(s)
+2026-11-20T14:26:32.2893815Z 1 Daemon stopped
+2026-11-20T14:26:32.3073521Z ##[endgroup]
+2026-11-20T14:26:32.3075107Z Not performing cache-cleanup due to build failure
+2026-11-20T14:26:32.3096085Z ##[group]Caching Gradle state
+2026-11-20T14:26:32.3180107Z Not saving configuration-cache state, as no encryption key was provided
+2026-11-20T14:26:32.3420539Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:32.7181401Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:32.7936084Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:32.8200302Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:33.0897357Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:33.1033708Z Sent 60570 of 60570 (100.0%), 0.3 MBs/sec
+2026-11-20T14:26:33.1776499Z Sent 91561 of 91561 (100.0%), 0.4 MBs/sec
+2026-11-20T14:26:33.2105553Z Sent 88689 of 88689 (100.0%), 0.4 MBs/sec
+2026-11-20T14:26:33.2695943Z Saved cache entry with key gradle-instrumented-jars-v1-da27189608cc64b8ccdc1e8234084779 from /home/runner/.gradle/caches/jars-*/*/ in 575ms
+2026-11-20T14:26:33.3559559Z Saved cache entry with key gradle-groovy-dsl-v1-28b9a41f693ba754e53f6f5a3dfc445c from /home/runner/.gradle/caches/*/groovy-dsl/*/ in 618ms
+2026-11-20T14:26:33.3771115Z Saved cache entry with key gradle-kotlin-dsl-v1-c7128ab5d6f11f6d3d010d23a43b15ca from /home/runner/.gradle/caches/*/kotlin-dsl/accessors/*/,/home/runner/.gradle/caches/*/kotlin-dsl/scripts/*/ in 663ms
+2026-11-20T14:26:33.5320037Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:34.0749615Z Sent 41993398 of 41993398 (100.0%), 40.1 MBs/sec
+2026-11-20T14:26:34.4160036Z Saved cache entry with key gradle-generated-gradle-jars-v1-cb4b032a7d08b9bf1e84e9eacaebcc29 from /home/runner/.gradle/caches/9.3.1/generated-gradle-jars/gradle-api-9.3.1.jar in 2093ms
+2026-11-20T14:26:34.7522440Z Sent 57606144 of 119113056 (48.4%), 54.9 MBs/sec
+2026-11-20T14:26:35.5926513Z Sent 61276160 of 66094562 (92.7%), 58.4 MBs/sec
+2026-11-20T14:26:35.7527922Z Sent 119113056 of 119113056 (100.0%), 56.8 MBs/sec
+2026-11-20T14:26:36.1017727Z Sent 66094562 of 66094562 (100.0%), 41.7 MBs/sec
+2026-11-20T14:26:36.1031479Z Saved cache entry with key gradle-dependencies-v1-9d09cd5ad823b6165fa4080749a671dd from /home/runner/.gradle/caches/modules-*/files-*/*/*/*/* in 3425ms
+2026-11-20T14:26:36.3342688Z Saved cache entry with key gradle-transforms-v1-f76c5db78645db7e2743e55670531a2b from /home/runner/.gradle/caches/transforms-4/*/,/home/runner/.gradle/caches/*/transforms/*/ in 3247ms
+2026-11-20T14:26:36.5171985Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/WordFiller/WordFiller --files-from manifest.txt --use-compress-program zstdmt
+2026-11-20T14:26:37.0121240Z Sent 356334 of 356334 (100.0%), 1.1 MBs/sec
+2026-11-20T14:26:37.1507887Z Saved cache entry with key gradle-home-v1|Linux-X64|build-apk[d7e1f4145c641963a9b9d9d9593df5f1]-70a97ac23b28b3394728917e4d2d6e73addaa6f5 from /home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle in 649ms
+2026-11-20T14:26:37.1510463Z ##[endgroup]
+2026-11-20T14:26:37.1517667Z Generating Job Summary
+2026-11-20T14:26:37.1532255Z Completed post-action step
+2026-11-20T14:26:37.1790081Z Post job cleanup.
+2026-11-20T14:26:37.3194908Z (node:2821) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T14:26:37.3195949Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T14:26:37.3393809Z Post job cleanup.
+2026-11-20T14:26:37.4390743Z [command]/usr/bin/git version
+2026-11-20T14:26:37.4441036Z git version 2.56.1
+2026-11-20T14:26:37.4486430Z Temporarily overriding HOME='/home/runner/work/_temp/2728f035-db95-459b-b447-be8941940c0a' before making global git config changes
+2026-11-20T14:26:37.4487822Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T14:26:37.4492170Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/WordFiller/WordFiller
+2026-11-20T14:26:37.4541309Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T14:26:37.4584285Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T14:26:37.4909206Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T14:26:37.4939031Z http.https://github.com/.extraheader
+2026-11-20T14:26:37.4969233Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-20T14:26:37.5013159Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T14:26:37.5344609Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T14:26:37.5381394Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T14:26:37.5833631Z Cleaning up orphan processes
+2026-11-20T14:26:37.6214496Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, gradle/actions/setup-gradle@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
