@@ -112,11 +112,22 @@ class ExampleRobolectricTest {
     composeTestRule.waitForIdle()
 
     // Drill into "All Files" folder to inspect Audio/Docs/Other filters, then navigate back to Folders
-    composeTestRule.onNodeWithTag("vault_folder_grid")
-      .performScrollToNode(hasTestTag("vault_folder_all"))
-    composeTestRule.onNodeWithTag("vault_folder_all").performClick()
+     composeTestRule.onNodeWithTag("vault_folder_grid")
+     .performScrollToNode(hasTestTag("vault_folder_all"))
+     composeTestRule.waitForIdle()
+     composeTestRule.onNodeWithTag("vault_folder_all").performClick()
+     composeTestRule.waitForIdle()
+    // Detail view mounts asynchronously under Robolectric (dialog dismissal + transition);
+    // wait for the folder-detail chrome before asserting its content
+    composeTestRule.waitUntil(timeoutMillis = 5_000L) {
+      composeTestRule.onAllNodes(hasTestTag("vault_folder_back_button"))
+        .fetchSemanticsNodes().isNotEmpty()
+    }
     composeTestRule.waitForIdle()
-    composeTestRule.onNodeWithText("No Hidden Files Yet").assertIsDisplayed()
+    composeTestRule.waitUntil(timeoutMillis = 5_000L) {
+      composeTestRule.onAllNodesWithText("No Hidden Files Yet").fetchSemanticsNodes().isNotEmpty()
+    }
+     composeTestRule.onNodeWithText("No Hidden Files Yet").assertIsDisplayed()
     composeTestRule.onNodeWithTag("vault_filter_row")
       .performScrollToNode(hasTestTag("vault_filter_audio"))
     composeTestRule.onNodeWithTag("vault_filter_audio").assertIsDisplayed()
