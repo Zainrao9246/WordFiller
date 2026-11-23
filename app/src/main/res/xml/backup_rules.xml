@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="file" path="vault_blobs" />
+    <exclude domain="file" path="vault_thumbs" />
+    <exclude domain="database" path="fillwords_db" />
+</full-backup-content>
